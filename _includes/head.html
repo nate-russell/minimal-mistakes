@@ -13,6 +13,13 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+{% if page.dtable %}
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+{% endif %}
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
 
